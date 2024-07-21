@@ -27,7 +27,7 @@ public class Binarytree {
         insertRec(root, newNode);
     }
 
-    private void insertRec(Node latestRoot, Node newNode) {
+    public void insertRec(Node latestRoot, Node newNode) {
         if (latestRoot.left == null) {
             latestRoot.left = newNode;
         } else if (latestRoot.right == null) {
@@ -74,7 +74,7 @@ public class Binarytree {
         }
     }
 
-    private int height(Node root) {
+    public int height(Node root) {
         if (root == null) {
             return 0;
         } else {
@@ -89,7 +89,7 @@ public class Binarytree {
         }
     }
 
-    private void printCurrentLevel(Node root, int level) {
+    public void printCurrentLevel(Node root, int level) {
         if (root == null) {
             return;
         }
@@ -117,7 +117,7 @@ public class Binarytree {
         root = deleteRec(root, data);
     }
 
-    private Node deleteRec(Node root, int data) {
+    public Node deleteRec(Node root, int data) {
         if (root == null) {
             return root;
         }
@@ -140,7 +140,7 @@ public class Binarytree {
         return root;
     }
 
-    private int minValue(Node root) {
+    public int minValue(Node root) {
         int minValue = root.data;
         while (root.left != null) {
             minValue = root.left.data;
